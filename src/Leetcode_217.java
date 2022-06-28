@@ -28,15 +28,15 @@ class Solution_217 {
 
 // Approach 2: Hashing
 // TC: O(n) SC: O(n)
-class Solution_217 {
-    public boolean containsDuplicate(int[] nums) {
-        Set<Integer> s = new HashSet<>(); 
-        for(int i=0;i<nums.length;i++){
-            if(s.contains(nums[i])){
-                return true;
-            }
-            s.add(nums[i]);
-        }
-        return false;
-    }
-}
+// class Solution_217 {
+//     public boolean containsDuplicate(int[] nums) {
+//         Set<Integer> s = new HashSet<>(); 
+//         for(int i=0;i<nums.length;i++){
+//             if(s.contains(nums[i])){
+//                 return true;
+//             }
+//             s.add(nums[i]);
+//         }
+//         return false;
+//     }
+// }
