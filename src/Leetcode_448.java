@@ -49,25 +49,25 @@ public class Leetcode_448 {
 class Solution_448 {
     public List<Integer> findDisappearedNumbers(int[] nums) {
         List<Integer> l=new ArrayList<>();
-        int len=nums.length;
-
-        // Matching every value in array with the counter if not found then add in list and continue checking for further values
-        for(int i=0;i<len;i++){
-            l.add(0);
-        }
-
-        for (int i = 0; i < len; i++) {
-            l.set(i, 1);
-        }
-
-        for (int i : l) {
-            if(i==1){
-                l.remove(i);
+        for(int i=0;i<nums.length;){
+            if(nums[i] != (i+1) && nums[i]!=nums[nums[i]-1]){
+                int a = nums[nums[i]-1];
+                int b = nums[i];
+                a=a+b;
+                b=a-b;
+                a=a-b;
+                nums[nums[i]-1] = a;
+                nums[i] = b;
+            }
+            else{
+                i++;
             }
         }
-
-        // If counter does not reaches len means there are missing values towards the end of the array
-        
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]!=i+1){
+                l.add(i+1);
+            }
+        }
         return l;
-    }
+    } 
 }
