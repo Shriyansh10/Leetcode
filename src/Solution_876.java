@@ -11,7 +11,7 @@ class ListNode {
  
 // Approach: Fast and Slow Pointers
 // TC: O(n) SC:O(1)
-public class Soltion_876 {
+public class Solution_876 {
     public ListNode middleNode(ListNode head) {
         ListNode slow = head ,fast = head;
         while (fast!= null && fast.next!=null){
