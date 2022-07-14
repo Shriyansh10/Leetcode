@@ -8,6 +8,8 @@ public class Leetcode_136 {
     }
 }
 
+// Approach: Bit Manipulations
+// TC: O(n) SC: O(1)
 class Solution_136 {
     public int singleNumber(int[] nums) {
         int ans = 0;

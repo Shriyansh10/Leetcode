@@ -27,14 +27,28 @@ public class Leetcode_268 {
 
 // Approach 1: Calculate total sum and array sum. Return difference.
 // TC: O(n) SC: O(1)
+// class Solution_268 {
+//     public int missingNumber(int[] nums) {
+//         int total_sum = 0;
+//         int array_sum = 0;
+//         for(int i=0;i<nums.length;i++){
+//             total_sum += i+1;
+//             array_sum += nums[i];
+//         }
+//         return total_sum - array_sum;
+//     }
+// }
+
+
+// Approach 2: Bit Manipulations.
+// TC: O(n) SC: O(1)
+// Best Approach
 class Solution_268 {
     public int missingNumber(int[] nums) {
-        int total_sum = 0;
-        int array_sum = 0;
+        int ans = nums.length;
         for(int i=0;i<nums.length;i++){
-            total_sum += i+1;
-            array_sum += nums[i];
+            ans ^= i^nums[i];
         }
-        return total_sum - array_sum;
+        return ans;
     }
 }
