@@ -46,7 +46,7 @@ public class Leetcode_46 {
 //
 class Solution_46 {
     public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> list = new ArrayList();
+        List<List<Integer>> list = new ArrayList<>();
         backtrack(nums, 0, list);
         return list;
     }
@@ -59,11 +59,11 @@ class Solution_46 {
     
     public void backtrack(int[] nums, int index, List<List<Integer>> list){
         if(index == nums.length){
-            List<Integer> tempList = new ArrayList();
+            List<Integer> tempList = new ArrayList<>();
             for(int j=0;j<nums.length;j++){
                 tempList.add(nums[j]);
             }
-            list.add(new ArrayList(tempList));
+            list.add(new ArrayList<>(tempList));
             return;
         }
         for(int i=index;i<nums.length;i++){

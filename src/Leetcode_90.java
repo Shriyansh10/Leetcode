@@ -18,13 +18,13 @@ public class Leetcode_90 {
 class Solution_90 {
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         Arrays.sort(nums);
-        List<List<Integer>> list = new ArrayList();
-        List<Integer> tempList = new ArrayList();
+        List<List<Integer>> list = new ArrayList<>();
+        List<Integer> tempList = new ArrayList<>();
         backtrack(nums, 0, list, tempList);
         return list;
     }
     public void backtrack(int[] nums, int index, List<List<Integer>> list, List<Integer> tempList){
-        list.add(new ArrayList(tempList));
+        list.add(new ArrayList<>(tempList));
         for(int i=index;i<nums.length;i++){
             if(i != index && nums[i] == nums[i-1]){
                 continue;

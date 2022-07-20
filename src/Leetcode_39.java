@@ -17,8 +17,8 @@ public class Leetcode_39 {
 // Approach: BackTracking
 class Solution_39 {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<Integer> tempList = new ArrayList();
-        List<List<Integer>> list = new ArrayList();
+        List<Integer> tempList = new ArrayList<>();
+        List<List<Integer>> list = new ArrayList<>();
             backtrack(candidates, target, tempList, list, 0, 0);
         return list;
     }
@@ -28,7 +28,7 @@ class Solution_39 {
             return;
         }
         if(sum == target){
-            list.add(new ArrayList(tempList));
+            list.add(new ArrayList<>(tempList));
             return;
         }
         for(int j = i;j<candidates.length;j++){
